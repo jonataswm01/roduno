@@ -5,7 +5,8 @@ const path = require('path');
 
 const root = process.cwd();
 const srcDir = path.join(root, 'src');
-const outDir = path.join(root, 'build');
+// Vercel expects an output directory named "public" by default
+const outDir = path.join(root, 'public');
 
 async function ensureDir(dir){ await fsp.mkdir(dir, { recursive: true }); }
 async function cleanDir(dir){

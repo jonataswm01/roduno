@@ -5,9 +5,9 @@ const path = require('path');
 function exists(p){ try { return fs.existsSync(p); } catch { return false; } }
 function read(p){ try { return fs.readFileSync(p, 'utf8'); } catch { return ''; } }
 
-const buildIndex = path.join('build', 'index.html');
-const css = path.join('build', 'styles', 'main.css');
-const js = path.join('build', 'scripts', 'main.js');
+const buildIndex = path.join('public', 'index.html');
+const css = path.join('public', 'styles', 'main.css');
+const js = path.join('public', 'scripts', 'main.js');
 
 const errors = [];
 if (!exists(buildIndex)) errors.push('Falta build/index.html');

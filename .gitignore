@@ -5,6 +5,6 @@
 package-lock.json
 scripts/*.log
 
-# Do not commit build output (only build on release)
+# Do not commit old build output
 build/
 
