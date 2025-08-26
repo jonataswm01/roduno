@@ -1,0 +1,26 @@
+{
+  "name": "roduno",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx live-server --watch=src --port=5173 --open=src/index.html",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1",
+    "verify": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonataswm01/roduno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonataswm01/roduno/issues"
+  },
+  "homepage": "https://github.com/jonataswm01/roduno#readme",
+  "description": "",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

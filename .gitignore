@@ -1,0 +1,10 @@
+﻿node_modules/
+.DS_Store
+
+# Dev artifacts
+package-lock.json
+scripts/*.log
+
+# Do not commit build output (only build on release)
+build/
+

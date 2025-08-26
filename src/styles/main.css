@@ -1,0 +1,49 @@
+/* Paleta: #000000, #111111, #FFFFFF */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:#000;color:#fff;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+
+/* Hero - 65% da tela */
+.hero{position:relative;min-height:65vh;display:grid;place-items:center;background:#000 url('../assets/rodovia.jpg') center/cover no-repeat}
+.hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75))}
+.hero__content{position:relative;text-align:center;padding:24px}
+.hero__title{margin:0 0 12px;font-weight:800;letter-spacing:.08em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hero__subtitle{margin:0;color:#fff;opacity:.95}
+@media (min-width:768px){.hero__title{font-size:56px}.hero__subtitle{font-size:28px;font-weight:300}}
+@media (max-width:767px){.hero__title{font-size:34px}.hero__subtitle{font-size:20px;font-weight:300}}
+
+/* Segunda seção */
+.contact-cta{background:#111111;padding:56px 20px;text-align:center}
+.contact-cta h2{margin:0 0 18px;font-weight:700;color:#fff}
+.loading-bar{position:relative;height:4px;width:min(560px,84%);margin:0 auto;background:rgba(255,255,255,.12);overflow:hidden;border-radius:999px}
+.loading-bar__inner{position:absolute;inset:0;width:30%;background:#fff;animation:bar-move 1.2s ease-in-out infinite;border-radius:999px}
+@keyframes bar-move{0%{transform:translateX(-100%)}50%{transform:translateX(30%)}100%{transform:translateX(400%)}}
+
+/* Rodapé */
+.site-footer{background:#000;padding:24px 16px;text-align:center;color:#fff}
+.site-footer p{margin:0;font-size:14px;opacity:.9}
+
+/* FAB de contato */
+.contact-fab{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:#111111;color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .2s ease,opacity .2s ease}
+.contact-fab:hover{transform:translateY(-2px)}
+.fab-icon{font-size:22px;line-height:1}
+
+/* Popup */
+.contact-popup{position:fixed;right:20px;bottom:90px;width:min(92vw,360px);background:rgba(0,0,0,.85);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.1);border-radius:12px;color:#fff;padding:14px 14px 16px;box-shadow:0 16px 40px rgba(0,0,0,.6);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+.contact-popup.is-open{opacity:1;transform:translateY(0);pointer-events:auto}
+.contact-popup__header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 2px 10px}
+.contact-popup__header h3{margin:0;font-size:16px}
+.contact-popup__close{appearance:none;border:0;background:transparent;color:#fff;cursor:pointer;font-size:20px;line-height:1;padding:2px 6px;border-radius:6px}
+.contact-popup__close:hover{background:rgba(255,255,255,.08)}
+
+.contact-form{display:grid;gap:10px}
+.field{display:grid;gap:6px}
+.field span{font-size:12px;opacity:.9}
+.field input,.field textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:#111111;color:#fff;outline:none}
+.field input:focus,.field textarea:focus{border-color:#fff}
+.btn-submit{appearance:none;border:1px solid rgba(255,255,255,.2);background:#000;color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}
+.btn-submit:hover{filter:brightness(1.1)}
+
+/* Acessibilidade / utilitários */
+:focus-visible{outline:2px solid #fff;outline-offset:2px}
+

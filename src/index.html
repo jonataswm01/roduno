@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RODUNO.COM.BR - Lançamento em breve</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+  <!-- Primeira Seção: Hero -->
+  <section class="hero" role="banner" aria-label="Roduno - Lançamento em breve">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">RODUNO.COM.BR</h1>
+      <p class="hero__subtitle">Lançamento em breve</p>
+    </div>
+  </section>
+
+  <!-- Segunda Seção: Contato -->
+  <section class="contact-cta" aria-labelledby="contact-cta-title">
+    <h2 id="contact-cta-title">Entre em contato</h2>
+    <div class="loading-bar" aria-hidden="true">
+      <span class="loading-bar__inner"></span>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <p>Todos os direitos reservados - Roduno 2025</p>
+  </footer>
+
+  <!-- Botão flutuante de contato + Popup -->
+  <button class="contact-fab" id="openContactFab" aria-haspopup="dialog" aria-controls="contactPopup" aria-label="Abrir contato">
+    <span class="fab-icon" aria-hidden="true">✉</span>
+  </button>
+
+  <aside class="contact-popup" id="contactPopup" role="dialog" aria-modal="true" aria-labelledby="contactPopupTitle" hidden>
+    <div class="contact-popup__header">
+      <h3 id="contactPopupTitle">Entre em contato</h3>
+      <button class="contact-popup__close" id="closeContactPopup" aria-label="Fechar">×</button>
+    </div>
+    <form class="contact-form" id="contactForm" novalidate>
+      <label class="field">
+        <span>Nome</span>
+        <input type="text" name="nome" required />
+      </label>
+      <label class="field">
+        <span>E-mail</span>
+        <input type="email" name="email" required />
+      </label>
+      <label class="field">
+        <span>Telefone</span>
+        <input type="tel" name="telefone" />
+      </label>
+      <label class="field">
+        <span>Mensagem</span>
+        <textarea name="mensagem" rows="4" required></textarea>
+      </label>
+      <button type="submit" class="btn-submit">Enviar</button>
+    </form>
+  </aside>
+
+  <script src="./scripts/main.js" defer></script>
+  
+</body>
+</html>
+
