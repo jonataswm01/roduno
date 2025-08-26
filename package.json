@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx live-server --watch=src --port=5173 --open=src/index.html",
-    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1",
-    "verify": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+    "build": "node scripts/build.cjs",
+    "verify": "node scripts/verify.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
