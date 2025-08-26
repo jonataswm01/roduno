@@ -12,8 +12,8 @@ if ($index) {
   if ($index -notmatch 'scripts/main.js') { $errors += 'index.html não referencia scripts/main.js' }
 }
 
-if (-not (Test-Path 'src/assets/rodovia.jpg')) {
-  Write-Warning 'Aviso: src/assets/rodovia.jpg ausente (imagem de fundo).'
+if (-not (Test-Path 'src/assets/rodovia-noite.jpg')) {
+  Write-Warning 'Aviso: src/assets/rodovia-noite.jpg ausente (imagem de fundo).'
 }
 
 if ($errors.Count -gt 0) {

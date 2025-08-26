@@ -4,20 +4,20 @@ html,body{height:100%}
 body{margin:0;background:#000;color:#fff;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
 
 /* Hero - 65% da tela */
-.hero{position:relative;min-height:65vh;display:grid;place-items:center;background:#000 url('../assets/rodovia.jpg') center/cover no-repeat}
+.hero{position:relative;min-height:70vh;display:block;background-color:#000;background-position:center bottom;background-size:cover;background-repeat:no-repeat;background-image:url('../assets/rodovia-noite.jpg'),url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1920&auto=format&fit=crop');}
 .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75))}
-.hero__content{position:relative;text-align:center;padding:24px}
-.hero__title{margin:0 0 12px;font-weight:800;letter-spacing:.08em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.hero__subtitle{margin:0;color:#fff;opacity:.95}
-@media (min-width:768px){.hero__title{font-size:56px}.hero__subtitle{font-size:28px;font-weight:300}}
-@media (max-width:767px){.hero__title{font-size:34px}.hero__subtitle{font-size:20px;font-weight:300}}
+.hero__content{position:relative;z-index:1;height:100%;width:100%;display:grid;grid-template-rows:min-content 1fr;row-gap:16px;padding:28px 16px}
+.hero__title{grid-row:1;margin:0;font-weight:800;letter-spacing:.08em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5);align-self:start;justify-self:center;font-size:18px}
+.hero__subtitle{grid-row:2;margin:0;color:#fff;opacity:.95;align-self:center;justify-self:center;font-size:34px;font-weight:300}
+@media (min-width:768px){.hero__title{font-size:24px}.hero__subtitle{font-size:64px}}
+@media (max-width:767px){.hero__title{font-size:18px}.hero__subtitle{font-size:40px}}
 
 /* Segunda seção */
-.contact-cta{background:#111111;padding:56px 20px;text-align:center}
+.contact-cta{background:#111111;padding:168px 20px;text-align:center}
 .contact-cta h2{margin:0 0 18px;font-weight:700;color:#fff}
 .loading-bar{position:relative;height:4px;width:min(560px,84%);margin:0 auto;background:rgba(255,255,255,.12);overflow:hidden;border-radius:999px}
-.loading-bar__inner{position:absolute;inset:0;width:30%;background:#fff;animation:bar-move 1.2s ease-in-out infinite;border-radius:999px}
-@keyframes bar-move{0%{transform:translateX(-100%)}50%{transform:translateX(30%)}100%{transform:translateX(400%)}}
+.loading-bar__inner{position:absolute;left:0;top:0;bottom:0;width:100%;background:#fff;transform-origin:left;transform:scaleX(0);opacity:0;animation:bar-appear 1.4s ease-in-out infinite}
+@keyframes bar-appear{0%{transform:scaleX(0);opacity:0}10%{opacity:1}90%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
 
 /* Rodapé */
 .site-footer{background:#000;padding:24px 16px;text-align:center;color:#fff}
