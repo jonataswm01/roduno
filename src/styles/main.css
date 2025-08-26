@@ -6,18 +6,22 @@ body{margin:0;background:#000;color:#fff;font:16px/1.5 system-ui,-apple-system,S
 /* Hero - 65% da tela */
 .hero{position:relative;min-height:70vh;display:block;background-color:#000;background-position:center bottom;background-size:cover;background-repeat:no-repeat;background-image:url('../assets/rodovia-noite.jpg'),url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1920&auto=format&fit=crop');}
 .hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75))}
-.hero__content{position:relative;z-index:1;height:100%;width:100%;display:grid;grid-template-rows:min-content 1fr;row-gap:16px;padding:28px 16px}
-.hero__title{grid-row:1;margin:0;font-weight:800;letter-spacing:.08em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5);align-self:start;justify-self:center;font-size:18px}
-.hero__subtitle{grid-row:2;margin:0;color:#fff;opacity:.95;align-self:center;justify-self:center;font-size:34px;font-weight:300}
-@media (min-width:768px){.hero__title{font-size:24px}.hero__subtitle{font-size:64px}}
-@media (max-width:767px){.hero__title{font-size:18px}.hero__subtitle{font-size:40px}}
+.hero__content{position:absolute;inset:0;z-index:1;display:grid;place-items:center;padding:0 16px}
+.hero__subtitle{margin:0;color:#fff;opacity:.95;text-align:center;font-size:34px;font-weight:300}
+@media (min-width:768px){.hero__subtitle{font-size:64px}}
+@media (max-width:767px){.hero__subtitle{font-size:40px}}
+
+/* Cabeçalho */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:10;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0));backdrop-filter:saturate(140%) blur(4px)}
+.site-header__inner{height:56px;display:flex;align-items:center;justify-content:center;padding:0 16px}
+.brand{color:#fff;font-weight:800;letter-spacing:.08em;text-shadow:0 2px 12px rgba(0,0,0,.5);font-size:18px}
+@media (min-width:768px){.brand{font-size:24px}}
 
 /* Segunda seção */
 .contact-cta{background:#111111;padding:168px 20px;text-align:center}
 .contact-cta h2{margin:0 0 18px;font-weight:700;color:#fff}
-.loading-bar{position:relative;height:4px;width:min(560px,84%);margin:0 auto;background:rgba(255,255,255,.12);overflow:hidden;border-radius:999px}
-.loading-bar__inner{position:absolute;left:0;top:0;bottom:0;width:100%;background:#fff;transform-origin:left;transform:scaleX(0);opacity:0;animation:bar-appear 1.4s ease-in-out infinite}
-@keyframes bar-appear{0%{transform:scaleX(0);opacity:0}10%{opacity:1}90%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+.loading-bar{position:relative;height:2px;width:64px;margin:12px auto 0;background:#fff;border-radius:999px}
+.loading-bar__inner{display:none}
 
 /* Rodapé */
 .site-footer{background:#000;padding:24px 16px;text-align:center;color:#fff}
