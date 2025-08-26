@@ -12,9 +12,7 @@ if ($index) {
   if ($index -notmatch 'scripts/main.js') { $errors += 'index.html não referencia scripts/main.js' }
 }
 
-if (-not (Test-Path 'src/assets/rodovia-noite.jpg')) {
-  Write-Warning 'Aviso: src/assets/rodovia-noite.jpg ausente (imagem de fundo).'
-}
+# A imagem de fundo é opcional em desenvolvimento (há fallback remoto no CSS)
 
 if ($errors.Count -gt 0) {
   Write-Error ("Verificação falhou:`n" + ($errors -join "`n"))
